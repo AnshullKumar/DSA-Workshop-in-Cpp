@@ -95,7 +95,7 @@ int loop(){
 
 //Function declaration
 void greet(string name){
-    cout << "Hello" << name << endl;
+    cout << "Hello " << name << endl;
 }
 int greet(){
     greet("Anurag");
