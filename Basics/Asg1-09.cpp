@@ -35,6 +35,13 @@ int reverse(){
 
     cout << "Enter a number with many digits: ";
     cin >> num;
-    while
-    
+    while(num[length] != '\0') {
+        length++;
+    }
+
+    cout << "Reversed number = ";
+    for (int i = length - 1; i >= 0; i--) {
+        cout << num[i];
+    }
+
 }
