@@ -45,3 +45,24 @@ int reverse(){
     }
 
 }
+
+//Write a program to print all the numbers divisible by 3 between 1 and 100.
+int divbythree(){
+    cout << "Numbers divisible by 3 between 1 and 100 are: " << endl;
+    for(int i = 0; i < 100; i++){
+        if(i % 3 == 0){
+            cout << i << " ";
+        }
+    }
+}
+
+//Write a program to find the sum of the first n natural numbers (1 + 2 + 3 + ... + n).
+int sum(){
+    int n, sum = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    for(int i = 1; i <= n; i++){
+        sum += i;
+    }
+    cout << "Sum of first " << n << " natural numbers is: " << sum << endl;
+}
