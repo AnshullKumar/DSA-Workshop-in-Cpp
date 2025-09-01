@@ -2,6 +2,12 @@
 #include<string>
 using namespace std;
 
+int hello(){
+    cout << "Hello World" << endl;
+    return 0;
+}
+
+// Write a program to take user input and display their age.
 int userage(){
     int userAge;
     cout << "Enter your age: ";
@@ -102,6 +108,7 @@ int greet(){
 }
 
 int main(){
+    // hello();
     // userage();
     // add();
     // sum();
