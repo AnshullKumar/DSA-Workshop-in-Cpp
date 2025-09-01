@@ -28,7 +28,7 @@ int QFirst(){
     }
 }
 
-//Write a program to reverse a number.
+//Q2.Write a program to reverse a number.
 int reverse(){
     char num[100];
     int length = 0;
@@ -46,7 +46,7 @@ int reverse(){
 
 }
 
-//Write a program to print all the numbers divisible by 3 between 1 and 100.
+//Q3.Write a program to print all the numbers divisible by 3 between 1 and 100.
 int divbythree(){
     cout << "Numbers divisible by 3 between 1 and 100 are: " << endl;
     for(int i = 0; i < 100; i++){
@@ -56,7 +56,7 @@ int divbythree(){
     }
 }
 
-//Write a program to find the sum of the first n natural numbers (1 + 2 + 3 + ... + n).
+//Q4.Write a program to find the sum of the first n natural numbers (1 + 2 + 3 + ... + n).
 int sum(){
     int n, sum = 0;
     cout << "Enter a number: ";
