@@ -69,23 +69,26 @@ void Bubblesort(){
 
 void linear(){
     int n, key;
-    cout << "Enter length of the array: " << endl;
+    cout << "Enter the number of elements: ";
     cin >> n;
     int arr[n];
-    cout << "Enter elements for the array: " << endl;
-    for(int i = 0; i < n; i++){
+    cout << "Enter " << n << " elements: ";
+    for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
-    cout << "Enter the value to search: " <<  endl;
+    cout << "Enter the element to search: ";
     cin >> key;
-    cout << "Searching..." << endl;
-    for(int i = 0; i < n; i++){
-        if(arr[i] == key){
-            cout << key << " is found at " << arr[i] << "index" << endl;
-        }else if(arr ){
-            cout << "Element is not present in the array." << endl;
+    int position = -1;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == key) {
+            position = i; // store index
+            break;
         }
     }
+    if (position != -1)
+        cout << "Element found at index " << position << endl;
+    else
+        cout << "Element not found in the array." << endl;
 }
 
 
