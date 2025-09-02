@@ -66,3 +66,12 @@ int sum(){
     }
     cout << "Sum of first " << n << " natural numbers is: " << sum << endl;
 }
+
+
+int main(){
+    // QFirst();
+    // reverse();
+    // divbythree();
+    sum();
+    return 0;
+}
