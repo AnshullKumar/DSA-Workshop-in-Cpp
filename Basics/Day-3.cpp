@@ -14,3 +14,21 @@ int vec(){
     return 0;
 }
 
+int stack(){
+    vector<int> v(5);
+    cout << "Enter elements for the array: " << endl;
+    for(int i = 0; i < v.size(); i++){
+        cin >> v[i];
+    }
+    cout << "Printing the array..." << endl;
+    for (int i = 0; i < v.size(); i++){
+        cout << v[i] << " ";
+    }
+    v.pop_back();
+    v.push_back(3);
+    cout << endl <<"Printing the array after operations..." << endl;
+    for (int i = 0; i < v.size(); i++){
+        cout << v[i] << " ";
+    }
+    
+}
