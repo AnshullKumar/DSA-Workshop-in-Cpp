@@ -32,3 +32,43 @@ int stack(){
     }
     
 }
+
+int reverse(){
+    vector<int> vec = {1,2,3,4};
+    int n = vec.size();
+    cout << "Printing the original array..." << endl;
+    for(int i = 0; i < n; i++){
+        cout << vec[i] << " ";
+    }
+
+    cout << endl << "Performing the reversing operation..." << endl;
+    for(int i = 0; i < n / 2; i++){
+        int temp = vec[i];
+        vec[i] = vec[n - i - 1];
+        vec[n - i - 1] = temp;
+    }
+    cout << "Reversed array..." << endl;
+    for(int i = 0; i < n; i++){
+        cout << vec[i] << " ";
+    }
+
+}
+
+void str(){
+    string s1 = "Hello ";
+    cout << s1.size() << " is the size of the string." << endl;
+    string s2 = "World!";
+    string s3 = s1 + s2;
+    cout << "After Concatenation..." << s3 << endl;
+    size_t pos = s3.find("World");
+    string sub = s3.substr(6,7);
+    cout << pos << " is the position.." << endl << sub << " is the sub string..." << endl; 
+}
+
+
+int main(){
+    //vec();
+    //stack();
+    //reverse();
+    str();
+}
