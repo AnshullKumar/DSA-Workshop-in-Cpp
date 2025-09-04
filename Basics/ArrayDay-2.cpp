@@ -69,7 +69,7 @@ void Bubblesort(){
 
 void linear(){
     int n, key;
-    cout << "Enter the number of elements: ";
+    cout << "Enter the number of elements for the array: ";
     cin >> n;
     int arr[n];
     cout << "Enter " << n << " elements: ";
@@ -78,15 +78,47 @@ void linear(){
     }
     cout << "Enter the element to search: ";
     cin >> key;
-    int position = -1;
+    int index = -1;
     for (int i = 0; i < n; i++) {
         if (arr[i] == key) {
-            position = i; // store index
+            index = i; // store index
             break;
         }
     }
-    if (position != -1)
-        cout << "Element found at index " << position << endl;
+    if (index != -1)
+        cout << key << "(Element) found at index " << index << endl;
+    else
+        cout << "Element not found in the array." << endl;
+}
+
+void Binary(){
+    int n, key;
+    cout << "Enter the number of elements the array would contain: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter the elements inside the array: " << endl;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    cout << "Enter the element to search: ";
+    cin >> key;
+    int low = 0, high = n - 1;
+    int index = -1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (arr[mid] == key) {
+            index = mid;
+            break;
+        }
+        else if (arr[mid] < key) {
+            low = mid + 1;
+        }
+        else {
+            high = mid - 1;
+        }
+    }
+    if (index != -1)
+        cout << "Element found at index " << index << endl;
     else
         cout << "Element not found in the array." << endl;
 }
@@ -96,5 +128,6 @@ int main(){
     //user_arr();
     //TwoD_Arr();
     //Bubblesort();
-    linear();
+    //linear();
+    Binary();
 }
