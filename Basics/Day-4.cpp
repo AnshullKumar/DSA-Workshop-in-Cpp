@@ -1,60 +1,68 @@
 #include<iostream>
-#include<vector>
 using namespace std;
-int vec(){
-    vector<int> v(5,10);
-    cout << endl << "For loop using C++ STL..." << endl;
-    for (int i: v) {  
-        cout << i << " ";
+#include<vector>
+#define max 5
+
+// Making a Menu Driven program using stack.
+int stk[max];
+int top = -1;
+int value, choice;
+
+bool full(){
+    return top == max - 1;
+}
+bool isEmpty(){
+    return top == -1;
+}
+void push(){
+    if(full()){
+        cout << "Stack Overflow." << endl;
+    }else{
+        cout << "Enter the value to push to the stack :" << endl;
+        cin >> value;
+        stk[++top] = value;
+        cout << value << " has been pushed to the stack..." << endl;
     }
-    cout << endl << "For loop with standard form.." << endl;
-    for(int i = 0; i < 5; i++){
-        cout << v[i] << " ";
-    } 
-    cout << endl;
+}
+void pop(){
+    if(isEmpty()){
+        cout << "Stack Underflow." << endl;
+    }else{
+        cout << stk[top--] <<" has been popped from the stack..." << endl;
+    }
+}
+void display(){
+    if(isEmpty()){
+        cout << "Stack is empty." << endl;
+    }else{
+        for(int i = top; i >= 0; i--){
+            cout << stk[i] << " ";
+        }
+        cout << endl;
+    }
+}
+
+int stackmenu(){
+    while(1){
+        cout << endl << "---Menu Driven Stack---" << endl;
+        cout << "1.Push (Insert)" << endl << "2.Pop (Delete)" << endl << "3.Display" << endl << "4.Exit" << endl;
+        cout << "Enter operation to perform :" << endl;
+        cin >>  choice;
+        if(choice == 1){
+            push();
+        } else if(choice == 2){
+            pop();
+        } else if(choice == 3){
+            display();
+        } else if(choice == 4){
+            return 0;
+        } else{
+            cout << "Invalid operation..." << endl;
+        }
+    }
     return 0;
 }
 
-int stack(){
-    vector<int> v(5);
-    cout << endl << "Enter elements for the array: " << endl;
-    for(int i = 0; i < v.size(); i++){
-        cin >> v[i];
-    }
-    cout << endl << "Printing the array..." << endl;
-    for (int i = 0; i < v.size(); i++){
-        cout << v[i] << " ";
-    }
-    v.pop_back();
-    v.push_back(3);
-    cout << endl <<"Printing the array after operations..." << endl;
-    for (int i = 0; i < v.size(); i++){
-        cout << v[i] << " ";
-    }
-    cout << endl;
-    
-}
-
-int reverse(){
-    vector<int> vec = {1,2,3,4};
-    int n = vec.size();
-    cout << "Printing the original array..." << endl;
-    for(int i = 0; i < n; i++){
-        cout << vec[i] << " ";
-    }
-
-    cout << endl << "Performing the reversing operation..." << endl;
-    for(int i = 0; i < n / 2; i++){
-        int temp = vec[i];
-        vec[i] = vec[n - i - 1];
-        vec[n - i - 1] = temp;
-    }
-    cout << "Reversed array..." << endl;
-    for(int i = 0; i < n; i++){
-        cout << vec[i] << " ";
-    }
-
-}
 
 // Write code for using queue using vectors.
 #define MAX 5
@@ -101,9 +109,7 @@ int queuemenu(){
 }
 
 int main(){
-    reverse();
-    stack();
-    vec();
+    stackmenu();
     queuemenu();
     return 0;
 }
