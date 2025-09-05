@@ -7,7 +7,7 @@ int vec(){
     for (int i: v) {  
         cout << i << " ";
     }
-    cout << "For loop with no==standard form..";
+    cout << "For loop with standard form..";
     for(int i = 0; i < 5; i++){
         cout << v[i] << " ";
     } 
