@@ -101,37 +101,10 @@ int queuemenu(){
 }
 
 int main(){
-    /*reverse();
+    reverse();
     stack();
     vec();
     queuemenu();
-    */
-
     
-    vector<int> prices = {7,1,5,3,6,4};
-    int x = -1;
-    int y = -1;
-    int j_index = 0, i_index = 0;
-    for(int i = 0; i < prices.size(); i++){
-        if(prices[i] < prices[i + 1]){
-            x = prices[i];
-            i_index++;
-            break;
-        }
-    }
-    for(int j = x; j < prices.size(); j++){
-        if(prices[j - 1] > prices[j]){
-            y = prices[j];
-            j_index++;
-        }
-    }
-    cout << y << " y value" << endl;
-    cout << x << " x value" << endl;
-    int z =  j_index - i_index;
-    cout << i_index << " i index value" << endl;
-    cout << j_index << " j index value" << endl;
-
-    cout << z << " z value" << endl;
-
     return 0;
 }
