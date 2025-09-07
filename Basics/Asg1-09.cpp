@@ -35,9 +35,9 @@ int reverse(){
 
     cout << "Enter a number with many digits: ";
     cin >> num;
-    while(num[length] != '\0') {
-        length++;
-    }
+        while(num[length] != '\0') {
+            length++;
+        }
 
     cout << "Reversed number = ";
     for (int i = length - 1; i >= 0; i--) {
@@ -70,8 +70,8 @@ int sum(){
 
 int main(){
     // QFirst();
-    // reverse();
+    reverse();
     // divbythree();
-    sum();
+    //sum();
     return 0;
 }
