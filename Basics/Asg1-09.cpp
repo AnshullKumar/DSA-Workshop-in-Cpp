@@ -43,7 +43,6 @@ int reverse(){
     for (int i = length - 1; i >= 0; i--) {
         cout << num[i];
     }
-
 }
 
 //Q3.Write a program to print all the numbers divisible by 3 between 1 and 100.
@@ -66,7 +65,6 @@ int sum(){
     }
     cout << "Sum of first " << n << " natural numbers is: " << sum << endl;
 }
-
 
 int main(){
     // QFirst();
