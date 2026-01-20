@@ -7,7 +7,7 @@ The aim of this workshop was to help us students strengthen their understanding 
 
 ## 📝 Topics Covered
 🟢 Introduction to C++ Basics  
-🔴 Arrays and Strings  
-🔴 Functions & Recursion  
-🔴 Linked Lists  
-🔴 Stacks and Queues  
+🟢 Arrays and Strings  
+🟢 Functions & Recursion  
+🟢 Linked Lists  
+🟢 Stacks and Queues  
